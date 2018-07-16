@@ -31,7 +31,7 @@ public class Task1_02
         if (room <= totalRooms)
         {
             // определяем номер подъезда
-            value = (double) ((room - 1) / (totalLevels * roomsByLevel) + 1);
+            value = (double) (room - 1) / (totalLevels * roomsByLevel) + 1;
             entry = (int) value;
 
             // определяем номер этажа

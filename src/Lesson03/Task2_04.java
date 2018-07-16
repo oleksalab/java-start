@@ -21,7 +21,7 @@ public class Task2_04
         // получаем обратный порядок цифр (символов)
         reverse = new StringBuilder(number).reverse().toString();
 
-        // берём значения прямого и обработного чисел
+        // берём значения прямого и обратного чисел
         leftToRight = Integer.valueOf(number);
         rightToLeft = Integer.valueOf(reverse);
 

@@ -22,7 +22,7 @@ public class Task04Ex02Level01
             // вычисляем факториал числа
             for (int i = 1; i <= number; i++)
             {
-                result = result * i;
+                result *= i;
             }
 
             System.out.println("Факториал этого числа = " + result);

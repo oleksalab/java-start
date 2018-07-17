@@ -11,6 +11,7 @@ public class Task04Ex04Level01
     {
         int width;
         int height;
+        char value;
 
         char pattern = '*';
 
@@ -28,10 +29,21 @@ public class Task04Ex04Level01
             // ширина
             for (int j = 0; j < width; j++)
             {
-                System.out.print(pattern);
+                if (i == 0 || i == (height - 1) || j == 0 || j == (width - 1))
+                {
+                    value = pattern;
+                }
+                else
+                {
+                    value = ' ';
+                }
+
+                System.out.print(value);
             }
 
             System.out.println();
         }
+
     }
+
 }

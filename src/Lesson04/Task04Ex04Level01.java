@@ -43,7 +43,5 @@ public class Task04Ex04Level01
 
             System.out.println();
         }
-
     }
-
 }

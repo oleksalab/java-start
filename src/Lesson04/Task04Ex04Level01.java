@@ -23,12 +23,13 @@ public class Task04Ex04Level01
         System.out.print("Введите высоту прямоугольника : ");
         height = input.nextInt();
 
-        // высота
+        // высота прямоугольника (вертикально)
         for (int i = 0; i < height; i++)
         {
-            // ширина
+            // ширина прямоугольника (горизонтально)
             for (int j = 0; j < width; j++)
             {
+                // рисуем элементы рамки прямоугольника в текущей строке
                 if (i == 0 || i == (height - 1) || j == 0 || j == (width - 1))
                 {
                     value = pattern;
@@ -41,6 +42,7 @@ public class Task04Ex04Level01
                 System.out.print(value);
             }
 
+            // переход на новую строку
             System.out.println();
         }
     }

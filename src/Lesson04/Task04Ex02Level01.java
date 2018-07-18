@@ -17,6 +17,7 @@ public class Task04Ex02Level01
         System.out.print("Введите число : ");
         number = input.nextInt();
 
+        // проверяем диапазон входных значений
         if (number > 4 && number < 16)
         {
             // вычисляем факториал числа

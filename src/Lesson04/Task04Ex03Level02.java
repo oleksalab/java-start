@@ -10,6 +10,7 @@ public class Task04Ex03Level02
     public static void main(String[] args)
     {
         int width;
+        char value;
         char pattern = '*';
 
         Scanner input = new Scanner(System.in);
@@ -19,19 +20,25 @@ public class Task04Ex03Level02
 
         if (width % 2 != 0)
         {
+            // высота фигуры (вертикально)
             for (int i = 1; i <= width; i++)
             {
+                // длина линии (горизонтально)
                 for (int j = 1; j <= width; j++)
                 {
+                    // рисунок текущей линии - символ либо пробел
                     if (i >= j && i >= (width + 1) - j || (i <= j && i <= (width + 1) - j))
                     {
-                        System.out.print(pattern);
+                        value = pattern;
                     }
                     else
                     {
-                        System.out.print(" ");
+                        value = ' ';
                     }
 
+                    System.out.print(value);
+
+                    // достигли ли конец текущей линии
                     if (j % width == 0)
                     {
                         System.out.println();

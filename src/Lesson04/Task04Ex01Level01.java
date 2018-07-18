@@ -36,6 +36,7 @@ public class Task04Ex01Level01
                 }
             }
 
+            // переход на новую строку
             System.out.println();
         }
     }

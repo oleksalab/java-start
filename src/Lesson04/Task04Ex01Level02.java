@@ -21,16 +21,19 @@ public class Task04Ex01Level02
         int line = 1;
         while (line <= height * 2 - 1)
         {
+            // добавляем новый символ к текущей линии
             System.out.print(pattern);
 
             numStars++;
 
+            // если достигли конец линии - переходим на новую
             if (numStars >= line || numStars >= height * 2 - line)
             {
                 System.out.println();
-
-                numStars = 0;
                 line++;
+
+                // сбрасываем счётчик символов в линии
+                numStars = 0;
             }
         }
 

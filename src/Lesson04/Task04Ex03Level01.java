@@ -3,7 +3,7 @@ package Lesson04;
 import java.util.Scanner;
 
 /*
-вывести таблицу умножения на 5 в формате `5 х 2 = 10`
+вывести таблицу умножения на X в формате `5 х 2 = 10`
  */
 public class Task04Ex03Level01
 {

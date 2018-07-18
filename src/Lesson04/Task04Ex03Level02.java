@@ -27,7 +27,7 @@ public class Task04Ex03Level02
                 for (int j = 1; j <= width; j++)
                 {
                     // рисунок текущей линии - символ либо пробел
-                    if (i >= j && i >= (width + 1) - j || (i <= j && i <= (width + 1) - j))
+                    if ((i >= j && i >= (width + 1) - j) || (i <= j && i <= (width + 1) - j))
                     {
                         value = pattern;
                     }

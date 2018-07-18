@@ -3,7 +3,7 @@ package Lesson04;
 import java.util.Scanner;
 
 /*
-наросовать фигуру в виде прямоугольника из `*`
+нарисовать фигуру в виде прямоугольника из `*`
  */
 public class Task04Ex04Level01
 {

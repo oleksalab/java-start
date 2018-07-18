@@ -3,7 +3,7 @@ package Lesson04;
 import java.util.Scanner;
 
 /*
-нарисовать фигуру в виде песочных часов для заданной ширины
+нарисовать фигуру в форме "песочных часов"
  */
 public class Task04Ex03Level02
 {

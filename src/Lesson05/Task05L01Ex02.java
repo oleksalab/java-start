@@ -1,6 +1,5 @@
 package Lesson05;
 
-import java.net.SecureCacheResponse;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -32,6 +31,5 @@ public class Task05L01Ex02 {
 
         System.out.println("Содержимое данного массива :");
         System.out.println(Arrays.toString(list));
-
     }
 }

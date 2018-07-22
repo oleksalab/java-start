@@ -8,7 +8,7 @@ public class Task05L01Ex01 {
     public static void main(String[] args) {
 
         int counter = 0;
-        int[] list = { 0, 5, 2, 4, 7, 1, 3, 19 };
+        int[] list = {0, 5, 2, 4, 7, 1, 3, 19};
 
         String primeList = "";
 

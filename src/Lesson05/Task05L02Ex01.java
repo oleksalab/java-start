@@ -1,6 +1,7 @@
 package Lesson05;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 /*
 перевернуть исходный массив на 90, 180, 270 градусов по часовой
@@ -9,91 +10,81 @@ public class Task05L02Ex01 {
 
     public static void main(String[] args) {
 
-        int[][] matrix = new int[5][5];
+        int size;
+        int option;
+        int[][] matrix;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Введите размер матрицы : ");
+        size = input.nextInt();
+
+        System.out.println();
 
         System.out.println("Исходная матрица");
-
-        // формируем исходную матрицу массива
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
-
+        // формируем массив под матрицу
+        matrix = new int[size][size];
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
                 matrix[i][j] = j + 1;
             }
-
             System.out.println(Arrays.toString(matrix[i]));
         }
 
         System.out.println();
-        System.out.println("Поворот на 90");
+
+        System.out.println("Выберите угол поворота матрицы : ");
+        System.out.print("(1 - 90\u00B0, 2 - 180\u00B0, 3 - 270\u00B0) => ");
+        option = input.nextInt();
 
         System.out.println();
-        System.out.println("Поворот на 180");
 
-        System.out.println();
-        System.out.println("Поворот на 270");
+        switch (option) {
+            case 1:
+                System.out.println("Поворот на 90\u00B0");
 
-        // поворот на 270 градусов
-        for (int i = 0; i < matrix.length / 2; i++) {
-            for (int j = i; j < matrix.length - i - 1; j++) {
+                for (int y = 0; y < size / 2; y++) {
+                    for (int x = y; x < size - y - 1; x++) {
+                        int temp = matrix[y][x];
+                        matrix[y][x] = matrix[size - 1 - x][y];
+                        matrix[size - 1 - x][y] = matrix[size - 1 - y][size - 1 - x];
+                        matrix[size - 1 - y][size - 1 - x] = matrix[x][size - 1 - y];
+                        matrix[x][size - 1 - y] = temp;
+                    }
+                }
+                break;
+            case 2:
+                System.out.println("Поворот на 180\u00B0");
 
-                // сохраняем значение текущей ячейки
-                int temp = matrix[i][j];
+                for (int y = 0; y < size; y++) {
+                    for (int x = 0; x < size / 2; x++) {
+                        int temp = matrix[y][x];
+                        matrix[y][x] = matrix[size - 1 - y][size - 1 - x];
+                        matrix[size - 1 - y][size - 1 - x] = temp;
+                    }
+                }
+                break;
+            case 3:
+                System.out.println("Поворот на 270\u00B0");
 
-                // перемещаем значения справа вверх
-                matrix[i][j] = matrix[j][matrix.length-1-i];
-
-                // перемещаем значения снизу направо
-                matrix[j][matrix.length-1-i] = matrix[matrix.length-1-i][matrix.length-1-j];
-
-                // перемещаем значения слева вниз
-                matrix[matrix.length-1-i][matrix.length-1-j] = matrix[matrix.length-1-j][i];
-
-                // назначаем значение слева
-                matrix[matrix.length-1-j][i] = temp;
-            }
-
+                for (int y = 0; y < size / 2; y++) {
+                    for (int x = y; x < size - y - 1; x++) {
+                        int temp = matrix[y][x];
+                        matrix[y][x] = matrix[x][size - 1 - y];
+                        matrix[x][size - 1 - y] = matrix[size - 1 - y][size - 1 - x];
+                        matrix[size - 1 - y][size - 1 - x] = matrix[size - 1 - x][y];
+                        matrix[size - 1 - x][y] = temp;
+                    }
+                }
+                break;
+            default:
+                System.out.println("Нет такого варианта!");
+                break;
         }
 
-        for (int i = 0; i < matrix.length; i++) {
+        // отображаем результирующую матрицу
+        for (int i = 0; i < size; i++) {
             System.out.println(Arrays.toString(matrix[i]));
         }
-
     }
-
 }
-
-/*
-        // поворот на 90 градусов
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
-
-                matrix90[i][j] = matrix[(matrix.length - 1) - j][i];
-            }
-
-            System.out.println(Arrays.toString(matrix90[i]));
-        }
-
-        System.out.println();
-
-        // поворот на 180 градусов
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
-
-                matrix180[i][j] = matrix[(matrix.length - 1) - i][(matrix.length - 1) - j];
-            }
-
-            System.out.println(Arrays.toString(matrix180[i]));
-        }
-
-        System.out.println();
-
-        // поворот на 270 градусов
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
-
-                matrix270[i][j] = matrix[j][((matrix.length - 1) - i)];
-            }
-
-            System.out.println(Arrays.toString(matrix270[i]));
-        }
-*/

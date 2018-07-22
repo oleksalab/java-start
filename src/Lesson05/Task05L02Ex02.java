@@ -25,14 +25,18 @@ public class Task05L02Ex02 {
             list[i] = input.nextInt();
         }
 
+        System.out.println();
+
         System.out.println("Исходный массив :");
         System.out.println(Arrays.toString(list));
 
+        System.out.println();
+
+        // выполняем зеркальную перестановку
         for (int i = 0; i < list.length / 2; i++) {
 
             // временно сохраняем значение исходного элемента
             int value = list[i];
-
             // зеркально переставляем элементы
             list[i] = list[(list.length - 1) - i];
             list[(list.length - 1) - i] = value;

@@ -23,13 +23,11 @@ public class Task05L01Ex04 {
         int counter = 0;
         for (int i = 0; i < text.length(); i++) {
             // поиск символа и подсчёт количества
-            if (text.charAt(i) == symbol)
-            {
+            if (text.charAt(i) == symbol) {
                 counter++;
             }
         }
 
         System.out.println("Количество символов '" + symbol + "' в строке : " + counter);
-
     }
 }

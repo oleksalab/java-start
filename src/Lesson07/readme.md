@@ -43,6 +43,13 @@ Calendar calendar = Calendar.getInstance();
 Для однопоточных приложений используется StringBuilder - несинхронизируемый, быстрый
 Для многопоточных приложений - StringBuffer - потокобезопасный, синхронизируемый, но медленный
  
+## Formatter
+позволяет отформатировать строку - удобно использовать вместе со строковыми классами типа StringBuilder
+```
+StringBuilder lines = new StringBuilder();
+Formatter precision = new Formatter(lines);
+```
+ 
 ## Исключения
 
 все растут от класса `Throwable (checked)`

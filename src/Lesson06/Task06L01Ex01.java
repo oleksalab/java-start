@@ -35,7 +35,7 @@ public class Task06L01Ex01 {
 
     private static int getMax(int[] list) {
 
-        int max = 0;
+        int max = list[0];
 
         for (int i : list) {
 

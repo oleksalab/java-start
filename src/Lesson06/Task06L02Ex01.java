@@ -53,6 +53,87 @@ public class Task06L02Ex01 {
     // определение следующего элемента последовательности
     private static int getNextBySeries(int[] list) {
 
+        // определяем последовательность
+        int id = getSeriesByList(list);
+
+        return id;
+    }
+
+    // диспетчер для определения алгоритма
+    private static int getSeriesByList(int[] list) {
+
+        int result;
+
+        // арифметическая прогрессия
+        result = checkAlgebra(list);
+        if (result > 0) return result;
+
+        // геометрическая прогрессия
+        result = checkGeometry(list);
+        if (result > 0) return result;
+
+        // квадратная прогрессия
+        result = checkSqrt(list);
+        if (result > 0) return result;
+
+        // кубическая прогрессия
+        result = checkCube(list);
+        if (result > 0) return result;
+
+        return result;
+    }
+
+    // алгебраическая прогрессия
+    private static int checkAlgebra(int[] list) {
+
+        int result = -1;
+
+        result = (list[1] - list[0] == list[2] - list[1])
+                ? list[list.length - 1] + (list[1] - list[0])
+                : result;
+
+        return result;
+    }
+
+    // геометрическая прогрессия
+    private static int checkGeometry(int[] list) {
+
+        int result = -1;
+
+        result = (list[1] / list[0] == list[2] / list[1])
+                ? list[list.length - 1] * (list[1] / list[0])
+                : result;
+
+        return result;
+    }
+
+    // квадратная прогрессия
+    private static int checkSqrt(int[] list) {
+
+        double result = -1;
+
+        result = (Math.sqrt(list[1]) - Math.sqrt(list[0]) == Math.sqrt(list[2]) - Math.sqrt(list[1]))
+                ? Math.pow((Math.sqrt(list[list.length - 1]) + Math.sqrt(list[1]) - Math.sqrt(list[0])), 2)
+                : result;
+
+        return (int) result;
+    }
+
+    // кубическая прогрессия
+    private static int checkCube(int[] list) {
+
+        double result = -1;
+
+        result = (Math.cbrt(list[1]) - Math.cbrt(list[0]) == Math.cbrt(list[2]) - Math.cbrt(list[1]))
+                ? Math.pow((Math.cbrt(list[list.length - 1]) + Math.cbrt(list[1]) - Math.cbrt(list[0])), 3)
+                : result;
+
+        return (int) result;
+    }
+
+    // определение следующего элемента последовательности
+    private static int getNextBySeriesOld(int[] list) {
+
         // определяем номер последовательности
         int id = getSeriesId(list);
 

@@ -27,6 +27,7 @@ public class Task05L02Ex03 {
         balance = input.nextLine();
 
         int id = 0;
+        int numDigits = 0;
         // разбиваем число на две части - целую и дробную
         // (разделителем числа может быть `.` либо `,`)
         String[] parts = balance.split("[.|,]");
@@ -34,6 +35,9 @@ public class Task05L02Ex03 {
         for (String part : parts) {
 
             long value = Long.valueOf(part);
+
+            // порядковый номер цифры после запятой
+            numDigits = (id > 0) ? numDigits++ : 0;
 
             int i = 3;
             int number;
@@ -53,7 +57,7 @@ public class Task05L02Ex03 {
                 }
 
                 // если для центов указана только одна цифра увеличиваем её разряд
-                if (id == 1 && number < 10) {
+                if (numDigits == 1 && number < 10) {
                     number *= 10;
                 }
 

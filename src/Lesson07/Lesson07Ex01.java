@@ -2,7 +2,7 @@ package Lesson07;
 
 import java.util.Date;
 
-public class Lesson07_01 {
+public class Lesson07Ex01 {
     public static void main(String[] args) {
 
         // определение даты

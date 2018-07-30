@@ -1,6 +1,6 @@
 package Lesson02;
 
-public class Lesson02_1
+public class Lesson02Ex01
 {
     public static int a = 4;
     public static int b = 5;

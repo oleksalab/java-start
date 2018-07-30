@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Lesson07_03 {
+public class Lesson07Ex03 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);

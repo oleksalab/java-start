@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class Lesson07_04 {
+public class Lesson07Ex04 {
     public static void main(String[] args) {
 
         Calendar calendar = Calendar.getInstance();

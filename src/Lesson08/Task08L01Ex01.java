@@ -6,6 +6,9 @@ import java.io.PrintWriter;
 import java.util.Formatter;
 import java.util.Scanner;
 
+/*
+консольный текстовый редактор с возможностью сохранения набранного текста в файл
+ */
 public class Task08L01Ex01 {
 
     public static void main(String[] args) {

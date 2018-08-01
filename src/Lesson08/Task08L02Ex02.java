@@ -56,7 +56,7 @@ public class Task08L02Ex02 {
         // построчно обрабатываем текст
         for (String line : lines) {
 
-            // строки разбираем по символьно
+            // строки разбираем посимвольно
             char[] letters = line.toCharArray();
             for (char letter : letters) {
 
@@ -81,7 +81,7 @@ public class Task08L02Ex02 {
         // сортируем полученную статистику
         sortStatsByCount(stats);
 
-        // убираем пустые ячейки
+        // определяем количество найденых букв
         int numLetters = 0;
         for (int i = 0; i < stats.length; i++) {
 
@@ -90,6 +90,7 @@ public class Task08L02Ex02 {
             }
         }
 
+        // возвращаем результат без пустых ячеек
         return Arrays.copyOfRange(stats, 0, numLetters);
     }
 

@@ -9,7 +9,11 @@ public class Task08L01Ex03 {
 
     public static void main(String[] args) {
 
-        String folderName = "src";
+        String folderName;
+        folderName = ".";
+        folderName = "/";
+        folderName = "out";
+        folderName = "src";
 
         // выводим каталоги из заданного
         showFolders(folderName);

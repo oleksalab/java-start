@@ -55,6 +55,7 @@ public class Task08L02Ex02 {
 
         // построчно обрабатываем текст
         for (String line : lines) {
+
             // строки разбираем по символьно
             char[] letters = line.toCharArray();
             for (char letter : letters) {
@@ -62,7 +63,7 @@ public class Task08L02Ex02 {
                 // учитываем только буквы (без пробелов, точек и т.д.)
                 if (letter > 65) {
                     stats[letter][0] = letter;
-                    stats[letter][1] = stats[letter][1] + 1;
+                    stats[letter][1]++;
                 }
             }
         }

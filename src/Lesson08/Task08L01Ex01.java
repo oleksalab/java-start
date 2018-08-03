@@ -31,7 +31,7 @@ public class Task08L01Ex01 {
         }
 
         // удаляем символ окончания ввода
-        buffer.deleteCharAt(buffer.indexOf(stopSymbol));
+        buffer.deleteCharAt(buffer.lastIndexOf(stopSymbol));
 
         // файл для сохранения текста
         File file = new File("out/L01Ex01-TextEditor.txt");
